@@ -6,6 +6,6 @@ namespace NLayer.Core
 		public string? Name { get; set; }
 
 		//Navigation Property
-		public ICollection<Product> Products { get; set; }
+		public ICollection<Product>? Products { get; set; }
 	}
 }
