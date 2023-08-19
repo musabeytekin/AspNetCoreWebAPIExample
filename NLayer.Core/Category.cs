@@ -5,7 +5,7 @@ namespace NLayer.Core
 	{
 		public string? Name { get; set; }
 
-		//Navigation Property
-		public ICollection<Product>? Products { get; set; }
+        //Navigation Property
+        public ICollection<ProductFeature>? Products { get; set; }
 	}
 }
