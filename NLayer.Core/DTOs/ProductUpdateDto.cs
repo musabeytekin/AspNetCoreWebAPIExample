@@ -10,4 +10,3 @@ namespace NLayer.Core.DTOs
         public int CategoryId { get; set; }
     }
 }
-
