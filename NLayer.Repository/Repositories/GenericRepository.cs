@@ -1,11 +1,10 @@
-﻿using System;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using NLayer.Core.Repositories;
 
 namespace NLayer.Repository.Repositories
 {
-	public class GenericRepository<T> : IGenericRepository<T> where T: class
+    public class GenericRepository<T> : IGenericRepository<T> where T: class
 	{
         protected readonly AppDbContext _context;
         private readonly DbSet<T> _dbSet;

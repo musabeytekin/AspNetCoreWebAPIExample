@@ -1,11 +1,26 @@
-﻿using System;
+﻿using NLayer.Core.UnitOfWorks;
+
 namespace NLayer.Repository.UnitOfWorks
 {
-	public class UnitOfWork
+    public class UnitOfWork: IUnitOfWork
 	{
-		public UnitOfWork()
-		{
-		}
-	}
-}
 
+        private readonly AppDbContext _context;
+
+        public UnitOfWork(AppDbContext context)
+        {
+            _context = context;
+        }
+
+
+        public void Commit()
+        {
+            _context.SaveChanges();
+        }
+
+        public async Task CommitAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
+    }
+}
