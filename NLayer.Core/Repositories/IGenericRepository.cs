@@ -6,7 +6,7 @@ namespace NLayer.Core.Repositories
     {
         Task<T> GetByIdAsync(int id);
 
-        IQueryable<T> GetAll(Expression<Func<T, bool>> expression);
+        IQueryable<T> GetAll();
 
         // why we use IQueryable instead List? 
         // productRepository.Where(x=> x.id == 5) T:Bool
