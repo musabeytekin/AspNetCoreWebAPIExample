@@ -17,9 +17,10 @@ namespace NLayer.API.Middlewares
 
                     var exceptionFeature = context.Features.Get<IExceptionHandlerFeature>();
 
-                    int statusCode = exceptionFeature.Error switch
+                    int statusCode = exceptionFeature!.Error switch
                     {
                         ClientSideException => 400,
+                        NotFoundException => 404,
                         _ => 500
                     };
 
