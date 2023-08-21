@@ -21,8 +21,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Filters\" />
+    <None Remove="Middlewares\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Filters\" />
+    <Folder Include="Middlewares\" />
   </ItemGroup>
 </Project>
