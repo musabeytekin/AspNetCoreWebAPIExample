@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using NLayer.Core.Repositories;
 using NLayer.Core.Services;
@@ -8,7 +7,7 @@ using NLayer.Service.Exceptions;
 
 namespace NLayer.Service.Services
 {
-	public class Service<T> : IService<T> where T : class
+    public class Service<T> : IService<T> where T : class
 	{
         private readonly IGenericRepository<T> _repository;
         private readonly IUnitOfWork _unitOfWork;
@@ -44,6 +43,7 @@ namespace NLayer.Service.Services
         {
             return await _repository.GetAll().ToListAsync();
         }
+
 
         public async Task<T> GetByIdAsync(int id)
         {
